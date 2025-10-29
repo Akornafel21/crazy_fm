@@ -1,0 +1,74 @@
+.crazy-fm {
+  width: 100vw;
+  padding: 5vw 5vw; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.crazy-fm__title-block {
+  max-width: 80vw;
+  margin-bottom: 2vw;
+}
+
+.crazy-fm-title {
+  font-size: 6vw; 
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1vw;
+}
+
+.crazy-fm__subtitle {
+  font-size:1vw;
+  color: #fff;
+}
+
+.crazy-fm__button-container {
+  margin-top: 2vw;
+}
+
+.crazy-fm__button-link {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  width: 18vw;
+  height: 4vw;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #1e90ff, #8a2be2); 
+  background-size: 200% 200%;
+  border-radius: 1vw;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  background-position: 0% 50%;
+}
+
+.crazy-fm__button-link:hover {
+  color: #fff;
+  transform: translateY(-0.5vw);
+  background-position: 100% 50%;
+}
+
+@media (max-width: 768px) {
+    .crazy-fm__button-link{
+        width: 60vw;
+        height: 12vw;
+        font-size: 4vw;
+    }
+    .crazy-fm{
+        padding:36vw 4vw;
+    }
+    .crazy-fm-title {
+        font-size: 10vw;
+    }
+    .crazy-fm__subtitle {
+        font-size: 5vw;
+    }
+    .crazy-fm__button-link {
+        font-size: 5vw;
+        padding: 3vw 6vw;
+        border-radius: 2vw;
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Project</title>
+            <link rel="stylesheet" href="styles/config_reset.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/crazyfm.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="hero-wrapper">
+            <div id="header-placeholder"></div>
+            <div id="crazyfm-placeholder"></div>
+        </div>
+
+        <script>
+            fetch('header.partial.html')
+            .then(response => response.text())
+            .then(html => {
+                document.querySelector('#header-placeholder').innerHTML = html;
+
+                const burger = document.querySelector('.header__nav-burger');
+                const navWrapper = document.querySelector('.header__nav-wrapper');
+
+                if (burger && navWrapper) {
+                burger.addEventListener('click', () => {
+                    navWrapper.classList.toggle('active');
+                    burger.classList.toggle('open');
+                });
+                }
+            })
+            .catch(err => console.error('Помилка завантаження header:', err));
+        </script>
+        <script>
+            fetch('crazy-fm.partial.html')
+                .then(response => response.text())
+                .then(html => {
+                document.querySelector('#crazyfm-placeholder').innerHTML = html;
+                })
+                .catch(err => console.error('Помилка завантаження CrazyFM:', err));
+        </script>
+        <script src="./js/burger.js"></script>
+    </body>
+</html>
