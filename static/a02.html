@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aufgabe 2 – Crazy FM</title>
+</head>
+
+<body>
+    <header>
+        <h1>Aufgabe 2 – Crazy FM</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Zurück zur Aufgabenübersicht</a></li>
+                <li><a href="a01.html">Zu Aufgabe 1</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--Aufgabe 2.1: Grundidee-->
+        <h2>2.1 Grundidee</h2>
+
+        <h3>Was macht die Anwendung?</h3>
+        <ul>
+            <li>Interaktive Online-Radio-Plattform mit Livestream, Podcasts und Events.</li>
+            <li>Startseite ist modular: Hero, Schedule, Podcasts, Events, About, Follow us, Footer.</li>
+            <li>Separate Seiten für Login und Account.</li>
+            <li>In-Page-Navigation durch Header-Links (Scroll zu Blöcken).</li>
+            <li>CTA im Hero: „Join Now“ → Login / „On Air Now“ → Player.</li>
+        </ul>
+
+        <h3>Wer sind die Benutzer?</h3>
+        <ul>
+            <li>Gäste – öffentlicher Zugriff auf Startseite.</li>
+            <li>Registrierte Benutzer – Zugang zu Player, Account und personalisierten Inhalten.</li>
+            <li>Administratoren / DJs – Verwaltung des Programms und Inhalte.</li>
+        </ul>
+
+        <h3>Welches Problem löst die Anwendung?</h3>
+        <ul>
+            <li>Zentraler Ort für Live-Radio und Podcasts ohne Medienbrüche.</li>
+            <li>Einfache, klare Navigation: Header-Links scrollen direkt zu den Blöcken.</li>
+            <li>Echtzeit-Status „On Air Now“ und Programmwechsel ohne Seiten-Reload.</li>
+            <li>Personalisierung über Benutzerkonto (später Favoriten/Empfehlungen möglich).</li>
+            <li>Admin kann Inhalte zeitnah veröffentlichen; Nutzer sehen Änderungen sofort.</li>
+        </ul>
+
+        <h3>Technische Mindestanforderungen</h3>
+        <ul>
+            <li><strong>Mehrere Benutzer mit Authentifizierung:</strong> Login/Logout, Session-Handling; Rollen: Gast,
+                Nutzer, Admin.</li>
+            <li><strong>Anwendungszustand:</strong>
+                <ul>
+                    <li><em>Global:</em> aktueller Live-Status, laufende Sendung, Programmplan.</li>
+                    <li><em>Session:</em> Login-Status, Nutzername/Email, UI-Zustand (CTA).</li>
+                </ul>
+            </li>
+            <li><strong>Live-Updates vom Server:</strong> WebSocket oder Server-Sent Events für:
+                <ul>
+                    <li>Umschalten des Hero-CTA („Join Now“ -> „On Air Now“).</li>
+                    <li>Aktualisierung der aktuellen Sendung / Now-Playing-Infos.</li>
+                    <li>Programmänderungen (Schedule) in Echtzeit.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Wesentliche Interaktionen (aus dem Storyboard)</h3>
+        <ul>
+            <li>Startseite (Gast) -> <em>Join Now</em> -> Login-Seite.</li>
+            <li>Login-Seite (E-Mail + Passwort) -> zurück zur Startseite (eingeloggt) mit CTA <em>On Air Now</em>.</li>
+            <li>CTA <em>On Air Now</em> -> Scroll zum Player-Block; Header-Eintrag „Account“ führt zur Account-Seite.
+            </li>
+            <li>Account-Seite -> Logout -> zurück zur Startseite (Gast).</li>
+            <li>Header-Navigation scrollt zu: Hero, Schedule, Podcasts, Events, About, Follow us.</li>
+        </ul>
+
+        <h3>Optionale Erweiterungen</h3>
+        <ul>
+            <li>Live-Chat während Sendungen (Channels, Typing-Indikator, Online-Status).</li>
+            <li>Suche/Filter für Podcasts und Programm.</li>
+            <li>Admin-Panel (CRUD für Shows/Podcasts/Events).</li>
+            <li>Benachrichtigungen bei Sendungsbeginn (Web Push / In-App).</li>
+        </ul>
+
+        <!--Aufgabe 2.2: Storyboard-->
+        <h2>2.2 Storyboard</h2>
+        <div>
+            <img src="a02/storyboard.jpg" alt="Storyboard Crazy FM" style="max-width: 100%; height: auto;">
+        </div>
+
+        <!--Aufgabe 2.3: Papierprototyp-->
+        <h2>2.3 Papierprototyp</h2>
+        <div>
+            <img src="a02/screen_1.jpg" style="max-width: 50%; height: auto;">
+            <img src="a02/screen_2.jpg" style="max-width: 50%; height: auto;">
+            <img src="a02/screen_3.jpg" style="max-width: 50%; height: auto;">
+            <img src="a02/screen_4.jpg" style="max-width: 50%; height: auto;">
+            <img src="a02/screen_5.jpg" style="max-width: 50%; height: auto;">
+            <img src="a02/screen_6.jpg" style="max-width: 50%; height: auto;">     
+            <img src="a02/screen_7.jpg" style="max-width: 50%; height: auto;">
+            <img src="a02/screen_8.jpg" style="max-width: 50%; height: auto;">
+            <img src="a02/screen_9.jpg" style="max-width: 50%; height: auto;">
+            <img src="a02/screen_10.jpg" style="max-width: 50%; height: auto;">
+        </div>
+</main>
+</body>
