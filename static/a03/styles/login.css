@@ -1,0 +1,103 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+  background-color: var(--ui-dark-shade-color);
+}
+
+/* Logo + Title block */
+.login__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.login__logo {
+  width: 80px;        
+  margin: 0 auto 20px;     
+  display: block;
+}
+
+.login__title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* Card */
+.login__card {
+  max-width: 380px;
+  width: 100%;
+}
+
+/* Form fields */
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.login__label {
+  font-size: 14px;
+  color: var(--ui-light-shade-color);
+}
+
+/* Inputs */
+.login__input {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: var(--ui-dark-gray);
+  border: 1px solid var(--ui-dark-accent-color);
+  border-radius: 6px;
+  color: var(--ui-light-shade-color);
+  font-size: 16px;
+  outline: none;
+}
+
+.login__input:focus {
+  border-color: var(--brend-color);
+}
+
+/* Actions line: button + link */
+.login__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login__hint {
+  font-size: 14px;
+  color: var(--ui-light-shade-color);
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Submit button */
+.login__submit {
+  background: linear-gradient(to right, var(--brend-color), var(--brend-color-gradient));
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  color: var(--ui-light-shade-color);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login__submit:hover {
+  background: linear-gradient(to left, var(--brend-color), var(--brend-color-gradient));
+}
+
+/* Links */
+.login__link {
+  font-size: 14px;
+  color: var(--ui-light-shade-color);
+  text-decoration: underline;
+}

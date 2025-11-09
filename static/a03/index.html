@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radio Station</title>
+
+
+
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/index.css" />
+</head>
+<body>
+
+  <header data-include="header.partial.html"></header>
+
+  <main>
+    <section data-include="crazy-fm.partial.html"></section>
+    <section data-include="login.partial.html"></section>
+  </main>
+
+
+
+  <script>
+    (async function () {
+      const nodes = document.querySelectorAll("[data-include]");
+      if (!nodes.length) return;
+
+      for (const node of nodes) {
+        const url = node.getAttribute("data-include");
+        try {
+          const res = await fetch(url, { cache: "no-cache" });
+          if (!res.ok) throw new Error(res.status + " " + res.statusText);
+          node.innerHTML = await res.text();
+        } catch (err) {
+          node.innerHTML =
+            '<div style="color:#f66;padding:1rem;border:1px dashed #f66">Include fehlgeschlagen: ' +
+            url + "<br/>Error: " + String(err) + "</div>";
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

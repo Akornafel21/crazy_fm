@@ -1,0 +1,47 @@
+<section class="login" id="login">
+  <div class="login__header container">
+    <a class="login__brand" href="index.html" aria-label="Zur Startseite">
+      <img class="login__logo" src="../img/logo.png" alt="Crazy FM Logo">
+    </a>
+    <h1 class="login__title">Log In</h1>
+  </div>
+
+  <div class="login__card container">
+    <form class="login__form" action="/login" method="post" autocomplete="on" novalidate>
+      <div class="login__field">
+        <label class="login__label" for="login-email">Email</label>
+        <input
+          class="login__input"
+          id="login-email"
+          name="email"
+          type="email"
+          placeholder="you@example.com"
+          required
+        >
+      </div>
+
+      <div class="login__field">
+        <label class="login__label" for="login-password">Password</label>
+        <input
+          class="login__input"
+          id="login-password"
+          name="password"
+          type="password"
+          placeholder="••••••••"
+          minlength="6"
+          required
+        >
+      </div>
+
+      <div class="login__actions">
+        <a class="login__link" href="#forgot">Forgot password?</a>
+        <button class="login__submit" type="submit">Log In</button>
+      </div>
+    </form>
+
+    <p class="login__hint">
+      No account yet?
+      <a class="login__link" href="#register">Create account</a>
+    </p>
+  </div>
+</section>
